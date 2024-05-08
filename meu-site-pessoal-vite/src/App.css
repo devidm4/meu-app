@@ -1,49 +1,4 @@
 
-header{
-  padding: 50px;
-}
-
-header img{
-  height: 150px;
-  border-radius: 50%;
-}
-header, footer{
-  background-color:#8697a6;
-  text-align: center;
-  color: #ffffff;
-}
-
-nav{
-  background-color: #8fcdd9;
-  text-align: center;
-}
-
-nav ul{
-  margin: 0;
-  padding: 25px;
-}
-
-nav ul li {
-  display: inline;
-  margin: 50px;
-}
-
-nav ul li a{
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #515f69;
-
-}
-
-section{
-  margin: 50px;
-  padding: 50px;
-  color: #515f69;
-  border-radius: 25px;
-  background-color: #8fcdd9;
-}
-
 .button{
   border: 0;
   color: #515f69;

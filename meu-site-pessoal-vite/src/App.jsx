@@ -1,21 +1,32 @@
-import {} from 'react'
+import { } from 'react'
+
 import './App.css'
-import devid_avatar from './assets/avatar-devid.jpeg'
+
+import Header from './components/Header/Header' 
+import NavigationBar from './components/navigationBar/navigationBar'    
+import Curriculum from './components/curriculum/curriculum'
+import Footer from './components/footer/footer'
 
 function App() {
   
   return(
-  <header>
-    <img src={devid_avatar} alt="Foto de Devid"/>
-    <h1>Devid Matheus</h1>
-    <h3>Licenciando Matemática.</h3>
-</header>
-  )
+   <>
+     <Header></Header>
+     
+     <NavigationBar></NavigationBar>
+
+     <Curriculum></Curriculum>
+
+     <Footer></Footer>
+
+
+  </>
+  
 
     
   
       
-  
+  )
 }
 
 export default App
