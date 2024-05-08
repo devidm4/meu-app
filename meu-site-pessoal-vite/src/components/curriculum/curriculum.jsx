@@ -4,7 +4,7 @@ import './curriculum.css'
 
 function Curriculum (){
     return(
-        <main>
+        <>
             <section>
         <h2>Resumo</h2>
             <p>Nome:Devid Matheus Nascimento Silva.
@@ -27,7 +27,7 @@ function Curriculum (){
                     <li>Professor de reforço</li>
                 </ul>
         </section>
-        </main>
+        </>
     )
 }
 

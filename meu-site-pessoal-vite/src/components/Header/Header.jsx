@@ -5,11 +5,13 @@ import './Header.css'
 
 
 function Header(){
+
+
     return (
         <header>
             <img src={devid_avatar} alt="Foto de Devid"/>
             <h1>Devid Matheus</h1>
-            <h3>Licenciando Matemática.</h3>
+            <h3>Licenciando Matemática</h3>
         </header>
     )
 }

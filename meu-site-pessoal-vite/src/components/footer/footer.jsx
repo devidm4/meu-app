@@ -1,9 +1,11 @@
 import React from "react";
 
-import './footer'
+import './footer.css'
 
 function Footer (){
-
-    <footer>Desenvolvido com muito trabalho por Devid Matheus</footer>
+    return(
+        <footer>Desenvolvido com muito trabalho por Devid Matheus</footer>
+    )
+  
 }
 export default Footer

@@ -6,6 +6,10 @@ import Header from './components/Header/Header'
 import NavigationBar from './components/navigationBar/navigationBar'    
 import Curriculum from './components/curriculum/curriculum'
 import Footer from './components/footer/footer'
+import Portfolio from './components/portfolio/portfolio'
+import Contact from './components/contact/contact'
+
+import { BrowserRouter, Routes, Route, } from "react-router-dom";
 
 function App() {
   
@@ -13,19 +17,19 @@ function App() {
    <>
      <Header></Header>
      
+     <BrowserRouter>
+
      <NavigationBar></NavigationBar>
 
-     <Curriculum></Curriculum>
+      <Routes>
+          <Route path="" element={<Curriculum />} />
+          <Route path="Portfolio" element={<Portfolio />} />
+          <Route path="contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
 
-     <Footer></Footer>
-
-
+    <Footer></Footer>
   </>
-  
-
-    
-  
-      
   )
 }
 
