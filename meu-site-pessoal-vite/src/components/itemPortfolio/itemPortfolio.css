@@ -1,0 +1,11 @@
+.item-portfólio{
+    display: inline-block;
+    margin: 50px;
+    border: 1px solid #515f69;
+}
+
+.item-portfólio a  {
+    text-decoration: none;
+    color: #515f69;
+    font-weight: bold;
+}
