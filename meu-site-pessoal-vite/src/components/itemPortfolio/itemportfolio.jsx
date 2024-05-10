@@ -1,13 +1,13 @@
 import React from "react";
 
-import './ItemPortfolio.css'
+import './itemPortfolio.css'
 
 
-function ItemPortfolio(){
+function ItemPortfolio(props){
     return(
-        <div class="item-portfólio"> 
-                    <a href="https://academy.comeialabs.com.br/" target="_blank">
-                        <img src={devid_avatar} alt="capa de Portfólio"/>
+        <div className="item-portfólio"> 
+                    <a href={props.link} target="_blank">
+                        <img src={props.image} alt="capa de Portfólio"/>
                         <p>Site de Portfólio</p>
                     </a>
                 </div>

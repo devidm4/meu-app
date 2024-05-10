@@ -2,33 +2,26 @@ import React from "react";
 
 import './portfolio.css'
 
-import devid_avatar from '../../assets/avatar-devid.jpeg'
+
 import ItemPortfolio from "../itemPortfolio/itemportfolio";
+import portfolio from "./portfolio.json"
 
 function Portfolio(){
 
-    const portfolios = [
-        {
-            link: "https://academy.comeialabs.com.br/",
-            image: '../../assets/avatar-devid.jpeg',
-            title: 'Site de Portfólio',
-        },    {
-            link: "https://academy.comeialabs.com.br/",
-            image: '../../assets/avatar-devid.jpeg',
-            title: 'Site de Portfólio',
-        },    {
-            link: "https://academy.comeialabs.com.br/",
-            image: '../../assets/avatar-devid.jpeg',
-            title: 'Site de Portfólio'
-        },
-    ]
+
 
 
     return(
         <main>
 
-        {portfolios.map(
-            (portfolio) => <ItemPortfolio></ItemPortfolio>
+        {portfolio.map(
+            (item, index) => 
+            <ItemPortfolio  
+                key={index}
+                link={item.link}
+                image={item.image}
+                title={item.title}
+            ></ItemPortfolio>
 
             )}
        

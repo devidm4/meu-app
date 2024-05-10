@@ -3,11 +3,12 @@ import { } from 'react'
 import './App.css'
 
 import Header from './components/Header/Header' 
-import NavigationBar from './components/navigationBar/navigationBar'    
+import NavigationBar from './components/navigationBar/navigationBar'
 import Curriculum from './components/curriculum/curriculum'
 import Footer from './components/footer/footer'
 import Portfolio from './components/portfolio/portfolio'
 import Contact from './components/contact/contact'
+
 
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
 

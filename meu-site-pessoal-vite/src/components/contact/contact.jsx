@@ -1,41 +1,93 @@
-import React from "react";
+import { useState } from "react";
 
 import './contact.css'
 
-function Contact(){
-    return(
-        <>
-           
-           <form action="">
-             <fieldset>
-                <label for="input-nome">Nome</label>
-                <input type="text" name="input-nome" id="input-nome" oninput="validar_nome()"/>
-                <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
-             </fieldset>
+function Contact() {
 
-             <fieldset>
-                <label for="input-email">E-mail</label>
-                <input type="email" name="input-email" id="input-email" oninput="validar_email()"/>
-                <span class="span-required">E-mail inválido</span>
-             </fieldset>
+   const [nome, setNome] = useState("")
+   const [email, setEmail] = useState("")
+   const [Telefone, setTelefone] = useState("")
+   const [mensagem, setMensagem] = useState("")
 
-             <fieldset>
-                <label for="input-tel">Telefone</label>
-                <input type="tel" name="input-tel" id="input-tel"/>
-                <span class="span-required">Numero de Telefone inválido</span>
-             </fieldset>
+   function enviarFormulario(event) {
+      event.preventDefault()
+  
+      const texto = `Nome: ${nome}\nE-mail: ${email}\nTelefone: ${Telefone}\nMensagem: ${mensagem}`;
+    
+      const numeroWhatsApp = import.meta.env.VITE_WHATSAPP_NUMBER 
 
-             <fieldset>
-                <label for="input-msg">Mensagem</label>
-                <textarea name="input-msg" id="input-msg" cols="30" rows="10"></textarea>
-             </fieldset>
+      const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+  
+      window.open(linkWhatsApp, '_blank' );
 
-                <center>
-                    <input type="submit" value="ENVIAR" class="button" onclick="enviarFormulario()"/>
-                </center>
 
-           </form>
+   }
 
-        </>
-    )
-}export default Contact
+
+   return (
+      <>
+
+         <form onSubmit={enviarFormulario}>
+            <fieldset>
+               <label htmlFor="input-nome">Nome</label>
+               <input
+                  type="text"
+                  name="input-nome"
+                  id="input-nome"
+                  required
+                  minLength={2}
+                  value={nome}
+                  onChange={(event) => setNome(event.target.value)}
+               />
+               <span className="span-required">Nome deve ter no mínimo 3 caracteres</span>
+            </fieldset>
+
+            <fieldset>
+               <label htmlFor="input-email">E-mail</label>
+               <input
+                  type="email"
+                  name="input-email"
+                  id="input-email"
+                  required
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+               />
+               <span className="span-required">E-mail inválido</span>
+            </fieldset>
+
+            <fieldset>
+               <label htmlFor="input-tel">Telefone</label>
+               <input
+                  type="tel"
+                  name="input-tel"
+                  id="input-tel"
+                  placeholder="(99) 99999-9999"
+                  required
+                  maxLength={15}
+                  value={Telefone}
+                  onChange={(event) => setTelefone(event.target.value)}
+               />
+               <span className="span-required">Numero de Telefone inválido</span>
+            </fieldset>
+
+            <fieldset>
+               <label htmlFor="input-msg">Mensagem</label>
+               <textarea
+                  name="input-msg"
+                  id="input-msg"
+                  cols="30"
+                  rows="10"
+                  value={mensagem}
+                  onChange={(event) => setMensagem(event.target.value)}>
+               </textarea>
+            </fieldset>
+
+            <center>
+               <input type="submit" value="ENVIAR" className="button" />
+            </center>
+
+         </form>
+
+      </>
+   )
+} export default Contact
