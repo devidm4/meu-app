@@ -7,8 +7,10 @@
 
 .button:hover{
   cursor: pointer;
-  color: #ffffff;
-  background-color: #8697a6;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 50px;
+  transition: 1s;
 }
 footer{
   padding: 10px;

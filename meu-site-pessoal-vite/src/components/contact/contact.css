@@ -19,7 +19,7 @@ form fieldset{
 
 form fieldset label{
     display: block;
-    color: #515f69;
+    color: #000000;
 }
 
 form fieldset input, textarea{

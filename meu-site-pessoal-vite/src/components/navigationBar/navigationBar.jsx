@@ -7,7 +7,8 @@ function NavigationBar() {
     return (
         <nav>
             <ul>
-                <li className="button"><Link to="/">CURRÍCULO</Link></li>
+                <li className="button"><Link to="/">INICIO</Link></li>
+                <li className="button"><Link to="/Curriculum">CURRÍCULO</Link></li>
                 <li className="button"><Link to="/Portfolio">PORTFÓLIO</Link></li>
                 <li className="button"><Link to="/contact">CONTATO</Link></li>
             </ul>

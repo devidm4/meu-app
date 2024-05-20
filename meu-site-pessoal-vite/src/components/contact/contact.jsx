@@ -38,6 +38,7 @@ function Contact() {
                   minLength={2}
                   value={nome}
                   onChange={(event) => setNome(event.target.value)}
+                  
                />
                <span className="span-required">Nome deve ter no mínimo 3 caracteres</span>
             </fieldset>
