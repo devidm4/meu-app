@@ -10,7 +10,7 @@ function Header(){
     return (
         <header>
             <img src={devid_avatar} alt="Foto de Devid"/>
-            <h1>Devid Matheus</h1>
+            <h1>Devid Matheus - 👈 La ele</h1>
             <h3>Licenciando Matemática</h3>
         </header>
     )
