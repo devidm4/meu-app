@@ -4,11 +4,9 @@ import './portfolio.css'
 
 
 import ItemPortfolio from "../itemPortfolio/itemportfolio";
-import portfolio from "./portfolio.json"
-
-function Portfolio(){
 
 
+function Portfolio({portfolio}){
 
 
     return(

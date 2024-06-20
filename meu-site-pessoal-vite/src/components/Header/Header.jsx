@@ -1,17 +1,16 @@
 import React from "react";
-import devid_avatar from '../../assets/avatar-devid.jpeg'
+
 import './Header.css'
 
+function Header(Props){
 
-
-function Header(){
-
+ const {nome, cargo, foto} = Props.informacoes
 
     return (
         <header>
-            <img src={devid_avatar} alt="Foto de Devid"/>
-            <h1>Devid Matheus</h1>
-            <h3>Licenciando Matemática</h3>
+            <img src={foto} alt="Foto de Devid"/>
+            <h1 id="nome-perfil">{nome}</h1>
+            <h3 id="aventoSubtitulo">{cargo}</h3>
         </header>
     )
 }

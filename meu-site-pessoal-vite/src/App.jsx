@@ -1,4 +1,4 @@
-import React, { } from 'react'
+import React, {  } from 'react'
 
 import api from './api'
 
@@ -29,8 +29,8 @@ function App() {
         cargo: informacao.data.cargo
       });
 
-      const experienciaAcademica = await api.get(`/experiencias?tipo=academico`);
-      const experienciaProfissional = await api.get(`/experiencias?tipo=profissional`);
+      const experienciaAcademica = await api.get(`/experiencias?tipo=Academico`);
+      const experienciaProfissional = await api.get(`/experiencias?tipo=Profissional`);
 
       setCurriculo({
         resumo: informacao.data.resumo,
@@ -67,4 +67,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
