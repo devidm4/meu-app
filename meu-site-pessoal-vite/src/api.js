@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const url = import.meta.env.VITE_API_URL
+
 const api = axios.create({
-    baseURL: 'https://json-serve-sooty.vercel.app/'
+    baseURL: url  
 });
 
 export default api;

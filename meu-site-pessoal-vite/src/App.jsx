@@ -56,6 +56,7 @@ function App() {
       <BrowserRouter>
         <NavigationBar></NavigationBar>
         <Routes>
+         <Route path="/" element={<Curriculum curriculo={curriculo} />} />
           <Route path="Curriculum" element={<Curriculum curriculo={curriculo} />} />
           <Route path="Portfolio" element={<Portfolio portifolio={portifolio} />} />
           <Route path="contact" element={<Contact />} />
